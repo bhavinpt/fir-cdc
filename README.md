@@ -20,3 +20,7 @@ The design uses fixed-point numbers and preserves precision during intermediate 
 
 ### RTL Implementation
 ![FIR-Page-1 drawio](https://github.com/bhavinpt/fir-cdc/assets/117598876/153e90db-74e8-4aee-a860-cfbf3ee11af0)
+
+Please find the source code, synthesis result, and waveforms in this repo.
+The encrypted TB is excluded as it belongs to the professor.
+The DW02 multiplier is excluded as it is part of Synopsys Designware library. (But for simulation only, you can replace it with any simple 2-stage multiplier) 
