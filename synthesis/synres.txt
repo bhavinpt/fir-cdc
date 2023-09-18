@@ -1,0 +1,689 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+              Version K-2015.06-SP5-1 for linux64 - Feb 26, 2016 
+                                        
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/015954770@SJSUAD.SJSU.EDU/.synopsys_dv_prefs.tcl
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+suppress_message { UID-401 VER-130 }
+read_sverilog ../firc.v
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+Loading db file '/apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading sverilog file '/home/015954770@SJSUAD.SJSU.EDU/fir/firc.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/015954770@SJSUAD.SJSU.EDU/fir/firc.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/utils.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/sample_fetch.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/utils.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/fifo.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/utils.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/shift_reg.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/utils.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/coef_buffer.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/utils.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/mux_array.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/utils.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/compmul_array.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/utils.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/DW02_mult_2_stage.v
+Opening include file /home/015954770@SJSUAD.SJSU.EDU/fir/accumulator.v
+
+Inferred memory devices in process
+	in routine Fifo line 24 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/fifo.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    fifo_arr_reg     | Flip-flop |  96   |  Y  | N  | N  | N  | N  | N  | N  |
+|      w_ptr_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r_ptr_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     dataout_reg     | Flip-flop |  24   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|     Fifo/39      |   4    |   24    |      2       |
+======================================================
+
+Inferred memory devices in process
+	in routine Shift_Register line 14 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/shift_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  parallel_out_reg   | Flip-flop |  696  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Sample_Fetch line 31 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/sample_fetch.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      empty_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Coef_Buffer line 26 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/coef_buffer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     buffer_reg      | Flip-flop |  108  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Mux_Controller line 30 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/mux_array.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      group_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine DW02_mult_2_stage line 65 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/DW02_mult_2_stage.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     PRODUCT_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CompMul line 26 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/compmul_array.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      resI_reg       | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+|      resQ_reg       | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CompMul_Array line 78 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/compmul_array.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     busy_sr_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Accumulator line 52 in file
+		'/home/015954770@SJSUAD.SJSU.EDU/fir/accumulator.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      accI_reg       | Flip-flop |  56   |  Y  | N  | N  | N  | N  | N  | N  |
+|      vBuff_reg      | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r4bI_reg       | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r4bbI_reg      | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r01I_reg       | Flip-flop |  53   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r23I_reg       | Flip-flop |  53   |  Y  | N  | N  | N  | N  | N  | N  |
+|     r0123I_reg      | Flip-flop |  54   |  Y  | N  | N  | N  | N  | N  | N  |
+|     r01234I_reg     | Flip-flop |  55   |  Y  | N  | N  | N  | N  | N  | N  |
+|    r01234AI_reg     | Flip-flop |  56   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r4bQ_reg       | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r4bbQ_reg      | Flip-flop |  52   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r01Q_reg       | Flip-flop |  53   |  Y  | N  | N  | N  | N  | N  | N  |
+|      r23Q_reg       | Flip-flop |  53   |  Y  | N  | N  | N  | N  | N  | N  |
+|     r0123Q_reg      | Flip-flop |  54   |  Y  | N  | N  | N  | N  | N  | N  |
+|     r01234Q_reg     | Flip-flop |  55   |  Y  | N  | N  | N  | N  | N  | N  |
+|    r01234AQ_reg     | Flip-flop |  56   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/015954770@SJSUAD.SJSU.EDU/fir/Fifo.db:Fifo'
+Loaded 10 designs.
+Current design is 'Fifo'.
+Fifo Shift_Register Sample_Fetch Coef_Buffer Mux_Controller DW02_mult_2_stage CompMul CompMul_Array Accumulator firc
+current_design firc
+Current design is 'firc'.
+{firc}
+create_clock Clk -name clk -period 2.331
+Information: Building the design 'Coef_Buffer' instantiated from design 'firc' with
+	the parameters "WIDTH=27,DEPTH=15". (HDL-193)
+Warning: Cannot find the design 'Coef_Buffer' in the library 'WORK'. (LBR-1)
+Information: Building the design 'DW02_mult_2_stage' instantiated from design 'CompMul' with
+	the parameters "24,27". (HDL-193)
+Warning: Cannot find the design 'DW02_mult_2_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Coef_Buffer' in 'firc'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul'. (LINK-5)
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_propagated_clock clk
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clk
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_propagated_clock clk
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_output_delay 0.5 -clock clk [all_outputs]
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port Clk]] [get_port Reset]]
+{PushIn SampI[23] SampI[22] SampI[21] SampI[20] SampI[19] SampI[18] SampI[17] SampI[16] SampI[15] SampI[14] SampI[13] SampI[12] SampI[11] SampI[10] SampI[9] SampI[8] SampI[7] SampI[6] SampI[5] SampI[4] SampI[3] SampI[2] SampI[1] SampI[0] SampQ[23] SampQ[22] SampQ[21] SampQ[20] SampQ[19] SampQ[18] SampQ[17] SampQ[16] SampQ[15] SampQ[14] SampQ[13] SampQ[12] SampQ[11] SampQ[10] SampQ[9] SampQ[8] SampQ[7] SampQ[6] SampQ[5] SampQ[4] SampQ[3] SampQ[2] SampQ[1] SampQ[0] PushCoef CoefAddr[4] CoefAddr[3] CoefAddr[2] CoefAddr[1] CoefAddr[0] CoefI[26] CoefI[25] CoefI[24] CoefI[23] CoefI[22] CoefI[21] CoefI[20] CoefI[19] CoefI[18] CoefI[17] CoefI[16] CoefI[15] CoefI[14] CoefI[13] CoefI[12] CoefI[11] CoefI[10] CoefI[9] CoefI[8] CoefI[7] CoefI[6] CoefI[5] CoefI[4] CoefI[3] CoefI[2] CoefI[1] CoefI[0] CoefQ[26] CoefQ[25] CoefQ[24] CoefQ[23] CoefQ[22] CoefQ[21] CoefQ[20] CoefQ[19] CoefQ[18] CoefQ[17] CoefQ[16] CoefQ[15] CoefQ[14] CoefQ[13] CoefQ[12] CoefQ[11] CoefQ[10] CoefQ[9] ...}
+set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_input_delay 0.6 -clock clk $all_inputs_wo_rst_clk
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_output_delay 0.6 -clock clk [all_outputs]
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_fix_hold [ get_clocks clk ]
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_output_delay 0.3 -clock clk [all_outputs]
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_max_delay 2.331 -from [all_inputs] -to [all_outputs]
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+compile_ultra
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.5.1 |   *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 739 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 2 instances of design 'Fifo'. (OPT-1056)
+Information: Uniquified 2 instances of design 'Shift_Register'. (OPT-1056)
+Information: Uniquified 5 instances of design 'CompMul'. (OPT-1056)
+  Simplifying Design 'firc'
+
+Information: Building the design 'Coef_Buffer' instantiated from design 'firc' with
+	the parameters "WIDTH=27,DEPTH=15". (HDL-193)
+Warning: Cannot find the design 'Coef_Buffer' in the library 'WORK'. (LBR-1)
+Information: Building the design 'DW02_mult_2_stage' instantiated from design 'CompMul_4' with
+	the parameters "24,27". (HDL-193)
+Warning: Cannot find the design 'DW02_mult_2_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Coef_Buffer' in 'firc'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_4'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_3'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_2'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_1'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_0'. (LINK-5)
+Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy sample_fetch/fifo_I before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy sample_fetch/shift_register_I before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy sample_fetch/fifo_Q before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy sample_fetch/shift_register_Q before Pass 1 (OPT-776)
+Information: Ungrouping 4 of 14 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Sample_Fetch'
+Information: Added key list 'DesignWare' to design 'Sample_Fetch'. (DDB-72)
+  Processing 'Accumulator'
+ Implement Synthetic for 'Accumulator'.
+  Processing 'Mux_Controller'
+Information: Added key list 'DesignWare' to design 'Mux_Controller'. (DDB-72)
+ Implement Synthetic for 'Mux_Controller'.
+  Processing 'CompMul_0'
+ Implement Synthetic for 'CompMul_0'.
+  Processing 'firc'
+  Processing 'CompMul_Array'
+Information: Building the design 'Coef_Buffer' instantiated from design 'firc' with
+	the parameters "WIDTH=27,DEPTH=15". (HDL-193)
+Warning: Cannot find the design 'Coef_Buffer' in the library 'WORK'. (LBR-1)
+Information: Building the design 'DW02_mult_2_stage' instantiated from design 'CompMul_0' with
+	the parameters "24,27". (HDL-193)
+Warning: Cannot find the design 'DW02_mult_2_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Coef_Buffer' in 'firc'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_0'. (LINK-5)
+Warning: Design 'firc' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'CompMul_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'CompMul_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'CompMul_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'CompMul_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'CompMul_3'. (DDB-72)
+Information: Ungrouping hierarchy compmul_array/mul3 'CompMul_1' #insts = 164. (OPT-777)
+Information: Added key list 'DesignWare' to design 'CompMul_Array'. (DDB-72)
+Information: Ungrouping hierarchy compmul_array/mul2 'CompMul_2' #insts = 164. (OPT-777)
+Information: Ungrouping hierarchy compmul_array/mul1 'CompMul_3' #insts = 164. (OPT-777)
+Information: Ungrouping hierarchy compmul_array/mul0 'CompMul_4' #insts = 164. (OPT-777)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Added key list 'DesignWare' to design 'Accumulator'. (DDB-72)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:25   30189.5      0.22       8.4     238.1                              0.0000      0.00  
+    0:00:26   30436.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:26   30436.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:26   30436.0      0.00       0.0     238.1                              0.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:31   30393.5      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:31   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:32   30257.0      0.00       0.0     238.1                              0.0000      0.00  
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:32   30258.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30258.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30258.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30258.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30258.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:32   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:33   30257.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:34   30083.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:34   30083.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:34   30083.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:35   30048.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:38   29710.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:38   29710.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:38   29710.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:38   29710.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:00:39   29453.0      0.00       0.0       0.0                              0.0000      0.00  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'firc' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'compmul_array/clk': 2976 load(s), 1 driver(s), 22 inout(s)
+Information: Building the design 'Coef_Buffer' instantiated from design 'firc' with
+	the parameters "WIDTH=27,DEPTH=15". (HDL-193)
+Warning: Cannot find the design 'Coef_Buffer' in the library 'WORK'. (LBR-1)
+Information: Building the design 'DW02_mult_2_stage' instantiated from design 'CompMul_Array' with
+	the parameters "24,27". (HDL-193)
+Warning: Cannot find the design 'DW02_mult_2_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Coef_Buffer' in 'firc'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_Array'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_0'. (LINK-5)
+Information: State dependent leakage is now switched from off to on.
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+create_clock clk -name clk -period 3.330
+Information: Building the design 'Coef_Buffer' instantiated from design 'firc' with
+	the parameters "WIDTH=27,DEPTH=15". (HDL-193)
+Warning: Cannot find the design 'Coef_Buffer' in the library 'WORK'. (LBR-1)
+Information: Building the design 'DW02_mult_2_stage' instantiated from design 'CompMul_Array' with
+	the parameters "24,27". (HDL-193)
+Warning: Cannot find the design 'DW02_mult_2_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Coef_Buffer' in 'firc'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_Array'. (LINK-5)
+Warning: Unable to resolve reference 'DW02_mult_2_stage' in 'CompMul_0'. (LINK-5)
+Warning: Can't find object 'clk' in design 'firc'. (UID-95)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+0
+update_timing
+Warning: Design 'firc' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Warning: Design 'firc' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_paths 5
+Warning: Design 'firc' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Mon May 15 05:08:19 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: accmulator/accI_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: accmulator/r01234AI_reg[47]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  accmulator/accI_reg[3]/CP (CFD1QXL)                     0.00 #     0.00 r
+  accmulator/accI_reg[3]/Q (CFD1QXL)                      0.39       0.39 f
+  accmulator/U2207/Z (CNR2X1)                             0.15       0.54 r
+  accmulator/U2211/Z (COND1XL)                            0.13       0.67 f
+  accmulator/U2212/Z (CANR1X1)                            0.14       0.80 r
+  accmulator/U2220/Z (COND1X1)                            0.13       0.93 f
+  accmulator/U2247/Z (CANR1X2)                            0.13       1.06 r
+  accmulator/U34/Z (COND1X1)                              0.13       1.19 f
+  accmulator/U2315/Z (CANR1XL)                            0.11       1.30 r
+  accmulator/U4642/Z (COND1XL)                            0.11       1.42 f
+  accmulator/U5330/Z (CANR1XL)                            0.12       1.53 r
+  accmulator/U5331/Z (CEOXL)                              0.20       1.73 r
+  accmulator/U5332/Z (CAN2XL)                             0.15       1.88 r
+  accmulator/r01234AI_reg[47]/D (CFD1QX2)                 0.00       1.88 r
+  data arrival time                                                  1.88
+
+  clock clk (rise edge)                                   2.33       2.33
+  clock network delay (propagated)                        0.00       2.33
+  clock uncertainty                                      -0.25       2.08
+  accmulator/r01234AI_reg[47]/CP (CFD1QX2)                0.00       2.08 r
+  library setup time                                     -0.20       1.88
+  data required time                                                 1.88
+  --------------------------------------------------------------------------
+  data required time                                                 1.88
+  data arrival time                                                 -1.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: sample_fetch/fifo_I/r_ptr_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sample_fetch/shift_register_I/parallel_out_reg[170]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  sample_fetch/fifo_I/r_ptr_reg[1]/CP (CFD1QX4)           0.00 #     0.00 r
+  sample_fetch/fifo_I/r_ptr_reg[1]/Q (CFD1QX4)            0.28       0.28 f
+  sample_fetch/U103/Z (CENX1)                             0.15       0.43 f
+  sample_fetch/U55/Z (CANR2X1)                            0.18       0.61 r
+  sample_fetch/U183/Z (CAN2X2)                            0.23       0.84 r
+  sample_fetch/U18/Z (CNIVX1)                             0.72       1.56 r
+  sample_fetch/U832/Z (CAOR2XL)                           0.29       1.85 r
+  sample_fetch/shift_register_I/parallel_out_reg[170]/D (CFD1QXL)
+                                                          0.00       1.85 r
+  data arrival time                                                  1.85
+
+  clock clk (rise edge)                                   2.33       2.33
+  clock network delay (propagated)                        0.00       2.33
+  clock uncertainty                                      -0.25       2.08
+  sample_fetch/shift_register_I/parallel_out_reg[170]/CP (CFD1QXL)
+                                                          0.00       2.08 r
+  library setup time                                     -0.22       1.86
+  data required time                                                 1.86
+  --------------------------------------------------------------------------
+  data required time                                                 1.86
+  data arrival time                                                 -1.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: sample_fetch/fifo_I/r_ptr_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sample_fetch/shift_register_I/parallel_out_reg[171]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  sample_fetch/fifo_I/r_ptr_reg[1]/CP (CFD1QX4)           0.00 #     0.00 r
+  sample_fetch/fifo_I/r_ptr_reg[1]/Q (CFD1QX4)            0.28       0.28 f
+  sample_fetch/U103/Z (CENX1)                             0.15       0.43 f
+  sample_fetch/U55/Z (CANR2X1)                            0.18       0.61 r
+  sample_fetch/U183/Z (CAN2X2)                            0.23       0.84 r
+  sample_fetch/U17/Z (CNIVX1)                             0.72       1.56 r
+  sample_fetch/U1007/Z (CAOR2XL)                          0.29       1.85 r
+  sample_fetch/shift_register_I/parallel_out_reg[171]/D (CFD1QXL)
+                                                          0.00       1.85 r
+  data arrival time                                                  1.85
+
+  clock clk (rise edge)                                   2.33       2.33
+  clock network delay (propagated)                        0.00       2.33
+  clock uncertainty                                      -0.25       2.08
+  sample_fetch/shift_register_I/parallel_out_reg[171]/CP (CFD1QXL)
+                                                          0.00       2.08 r
+  library setup time                                     -0.22       1.86
+  data required time                                                 1.86
+  --------------------------------------------------------------------------
+  data required time                                                 1.86
+  data arrival time                                                 -1.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: sample_fetch/fifo_I/r_ptr_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sample_fetch/shift_register_I/parallel_out_reg[181]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  sample_fetch/fifo_I/r_ptr_reg[1]/CP (CFD1QX4)           0.00 #     0.00 r
+  sample_fetch/fifo_I/r_ptr_reg[1]/Q (CFD1QX4)            0.28       0.28 f
+  sample_fetch/U103/Z (CENX1)                             0.15       0.43 f
+  sample_fetch/U55/Z (CANR2X1)                            0.18       0.61 r
+  sample_fetch/U183/Z (CAN2X2)                            0.23       0.84 r
+  sample_fetch/U18/Z (CNIVX1)                             0.72       1.56 r
+  sample_fetch/U996/Z (CAOR2XL)                           0.29       1.85 r
+  sample_fetch/shift_register_I/parallel_out_reg[181]/D (CFD1QXL)
+                                                          0.00       1.85 r
+  data arrival time                                                  1.85
+
+  clock clk (rise edge)                                   2.33       2.33
+  clock network delay (propagated)                        0.00       2.33
+  clock uncertainty                                      -0.25       2.08
+  sample_fetch/shift_register_I/parallel_out_reg[181]/CP (CFD1QXL)
+                                                          0.00       2.08 r
+  library setup time                                     -0.22       1.86
+  data required time                                                 1.86
+  --------------------------------------------------------------------------
+  data required time                                                 1.86
+  data arrival time                                                 -1.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: sample_fetch/fifo_I/r_ptr_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: sample_fetch/shift_register_I/parallel_out_reg[262]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  sample_fetch/fifo_I/r_ptr_reg[1]/CP (CFD1QX4)           0.00 #     0.00 r
+  sample_fetch/fifo_I/r_ptr_reg[1]/Q (CFD1QX4)            0.28       0.28 f
+  sample_fetch/U103/Z (CENX1)                             0.15       0.43 f
+  sample_fetch/U55/Z (CANR2X1)                            0.18       0.61 r
+  sample_fetch/U183/Z (CAN2X2)                            0.23       0.84 r
+  sample_fetch/U17/Z (CNIVX1)                             0.72       1.56 r
+  sample_fetch/U1008/Z (CAOR2XL)                          0.29       1.85 r
+  sample_fetch/shift_register_I/parallel_out_reg[262]/D (CFD1QXL)
+                                                          0.00       1.85 r
+  data arrival time                                                  1.85
+
+  clock clk (rise edge)                                   2.33       2.33
+  clock network delay (propagated)                        0.00       2.33
+  clock uncertainty                                      -0.25       2.08
+  sample_fetch/shift_register_I/parallel_out_reg[262]/CP (CFD1QXL)
+                                                          0.00       2.08 r
+  library setup time                                     -0.22       1.86
+  data required time                                                 1.86
+  --------------------------------------------------------------------------
+  data required time                                                 1.86
+  data arrival time                                                 -1.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
+write -hierarchy -format verilog -output firc_netlist.v
+Warning: Design 'firc' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/home/015954770@SJSUAD.SJSU.EDU/fir/synthesis/firc_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 48 nets to module firc using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+quit
+
+Thank you...

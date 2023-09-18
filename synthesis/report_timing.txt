@@ -1,0 +1,314 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Tue May  9 21:21:17 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: sample_fetch/stopOut (internal pin)
+  Endpoint: StopIn (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sample_fetch/stopOut (Sampel_Fetch)      0.00       0.00 r
+  StopIn (out)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Tue May  9 21:22:02 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: sample_fetch/stopOut (internal pin)
+  Endpoint: StopIn (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sample_fetch/stopOut (Sampel_Fetch)      0.00       0.00 r
+  StopIn (out)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Tue May  9 21:23:02 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: sample_fetch/stopOut (internal pin)
+  Endpoint: StopIn (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sample_fetch/stopOut (Sampel_Fetch)      0.00       0.00 r
+  StopIn (out)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Tue May  9 21:23:59 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: sample_fetch/stopOut (internal pin)
+  Endpoint: StopIn (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sample_fetch/stopOut (Sampel_Fetch)      0.00       0.00 r
+  StopIn (out)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Tue May  9 21:25:24 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: sample_fetch/stopOut (internal pin)
+  Endpoint: StopIn (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sample_fetch/stopOut (Sampel_Fetch)      0.00       0.00 r
+  StopIn (out)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Tue May  9 21:26:58 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: sample_fetch/stopOut (internal pin)
+  Endpoint: StopIn (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sample_fetch/stopOut (Sample_Fetch)      0.00       0.00 r
+  StopIn (out)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Wed May 10 02:19:22 2023
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: sample_fetch/stopOut (internal pin)
+  Endpoint: StopIn (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  sample_fetch/stopOut (Sample_Fetch)      0.00       0.00 r
+  StopIn (out)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+Warning: Design 'firc' has '7' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : firc
+Version: K-2015.06-SP5-1
+Date   : Sun May 14 23:24:14 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: compmul_array/mul3/resQ_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: accmulator/r23Q_reg[51]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  compmul_array/mul3/resQ_reg[1]/CP (CFD1QXL)             0.00 #     0.00 r
+  compmul_array/mul3/resQ_reg[1]/Q (CFD1QXL)              0.39       0.39 f
+  compmul_array/mul3/resQ[1] (CompMul_2)                  0.00       0.39 f
+  compmul_array/r3Q[1] (CompMul_Array)                    0.00       0.39 f
+  accmulator/r3Q[1] (Accumulator)                         0.00       0.39 f
+  accmulator/add_83/B[1] (Accumulator_DW01_add_14)        0.00       0.39 f
+  accmulator/add_83/U243/Z (CND2XL)                       0.10       0.49 r
+  accmulator/add_83/U224/Z (COND1X1)                      0.13       0.62 f
+  accmulator/add_83/U223/Z (CANR1X2)                      0.08       0.71 r
+  accmulator/add_83/U233/Z (COND1X1)                      0.10       0.81 f
+  accmulator/add_83/U231/Z (CANR1X1)                      0.10       0.91 r
+  accmulator/add_83/U249/Z (COND1X1)                      0.11       1.01 f
+  accmulator/add_83/U232/Z (CANR1X1)                      0.10       1.11 r
+  accmulator/add_83/U242/Z (COND1XL)                      0.11       1.22 f
+  accmulator/add_83/U240/Z (CANR1X1)                      0.10       1.32 r
+  accmulator/add_83/U228/Z (COND1X1)                      0.12       1.44 f
+  accmulator/add_83/U227/Z (CANR1X2)                      0.08       1.53 r
+  accmulator/add_83/U294/Z (COND1X1)                      0.11       1.63 f
+  accmulator/add_83/U234/Z (CANR1XL)                      0.14       1.77 r
+  accmulator/add_83/U235/Z (COND1XL)                      0.16       1.94 f
+  accmulator/add_83/U251/Z (CANR1X1)                      0.10       2.04 r
+  accmulator/add_83/U237/Z (COND1X1)                      0.14       2.18 f
+  accmulator/add_83/U230/Z (CANR1X2)                      0.10       2.28 r
+  accmulator/add_83/U229/Z (COND1X2)                      0.10       2.37 f
+  accmulator/add_83/U89/Z (CANR1X1)                       0.10       2.47 r
+  accmulator/add_83/U250/Z (COND1X1)                      0.13       2.60 f
+  accmulator/add_83/U245/Z (CANR1X1)                      0.08       2.68 r
+  accmulator/add_83/U295/Z (COND1X1)                      0.13       2.81 f
+  accmulator/add_83/U222/Z (CANR1X2)                      0.08       2.89 r
+  accmulator/add_83/U236/Z (COND1XL)                      0.14       3.02 f
+  accmulator/add_83/U248/Z (CANR1X1)                      0.10       3.13 r
+  accmulator/add_83/U247/Z (COND1X1)                      0.11       3.24 f
+  accmulator/add_83/U246/Z (CANR1X1)                      0.08       3.32 r
+  accmulator/add_83/U225/Z (COND1X1)                      0.11       3.43 f
+  accmulator/add_83/U25/CO (CFA1X1)                       0.25       3.68 f
+  accmulator/add_83/U24/CO (CFA1X1)                       0.25       3.93 f
+  accmulator/add_83/U23/CO (CFA1X1)                       0.25       4.18 f
+  accmulator/add_83/U22/CO (CFA1X1)                       0.25       4.43 f
+  accmulator/add_83/U21/CO (CFA1X1)                       0.25       4.68 f
+  accmulator/add_83/U20/CO (CFA1X1)                       0.25       4.93 f
+  accmulator/add_83/U19/CO (CFA1X1)                       0.25       5.18 f
+  accmulator/add_83/U18/CO (CFA1X1)                       0.25       5.43 f
+  accmulator/add_83/U17/CO (CFA1X1)                       0.25       5.68 f
+  accmulator/add_83/U16/CO (CFA1X1)                       0.25       5.93 f
+  accmulator/add_83/U15/CO (CFA1X1)                       0.25       6.18 f
+  accmulator/add_83/U14/CO (CFA1X1)                       0.25       6.43 f
+  accmulator/add_83/U13/CO (CFA1X1)                       0.25       6.68 f
+  accmulator/add_83/U12/CO (CFA1X1)                       0.25       6.93 f
+  accmulator/add_83/U11/CO (CFA1X1)                       0.25       7.18 f
+  accmulator/add_83/U10/CO (CFA1X1)                       0.25       7.43 f
+  accmulator/add_83/U9/CO (CFA1X1)                        0.25       7.68 f
+  accmulator/add_83/U8/CO (CFA1X1)                        0.25       7.93 f
+  accmulator/add_83/U7/CO (CFA1X1)                        0.25       8.18 f
+  accmulator/add_83/U6/CO (CFA1X1)                        0.25       8.43 f
+  accmulator/add_83/U5/CO (CFA1X1)                        0.25       8.68 f
+  accmulator/add_83/U4/CO (CFA1X1)                        0.25       8.93 f
+  accmulator/add_83/U3/CO (CFA1X1)                        0.25       9.18 f
+  accmulator/add_83/U2/S (CFA1X1)                         0.28       9.46 f
+  accmulator/add_83/SUM[51] (Accumulator_DW01_add_14)     0.00       9.46 f
+  accmulator/U155/Z (CAOR2X1)                             0.22       9.68 f
+  accmulator/r23Q_reg[51]/D (CFD1QXL)                     0.00       9.68 f
+  data arrival time                                                  9.68
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (propagated)                        0.00      10.00
+  clock uncertainty                                      -0.05       9.95
+  accmulator/r23Q_reg[51]/CP (CFD1QXL)                    0.00       9.95 r
+  library setup time                                     -0.27       9.68
+  data required time                                                 9.68
+  --------------------------------------------------------------------------
+  data required time                                                 9.68
+  data arrival time                                                 -9.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
