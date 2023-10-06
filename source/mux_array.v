@@ -80,93 +80,33 @@ module Mux_Controller #(S_WIDTH = 24,
     end
     endgenerate
 
-
-    // I part
-    assign sampMuxOutI[5] = 
-        (group == 0) ? `SLICE(samp_inI, 24, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inI, 19, S_WIDTH):
-        'b0;
-
-    assign sampMuxOutI[6] = 
-        (group == 0) ? `SLICE(samp_inI, 25, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inI, 20, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inI, 15, S_WIDTH):
-        'b0;
-
-    assign sampMuxOutI[7] = 
-        (group == 0) ? `SLICE(samp_inI, 26, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inI, 21, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inI, 16, S_WIDTH):
-        'b0;
-
-    assign sampMuxOutI[8] = 
-        (group == 0) ? `SLICE(samp_inI, 27, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inI, 22, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inI, 17, S_WIDTH):
-        'b0;
-    assign sampMuxOutI[9] = 
-        (group == 0) ? `SLICE(samp_inI, 28, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inI, 23, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inI, 18, S_WIDTH):
-        'b0;
-
-    /////// Q part
-    
-    assign sampMuxOutQ[5] = 
-        (group == 0) ? `SLICE(samp_inQ, 24, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inQ, 19, S_WIDTH):
-        'b0;
-
-    assign sampMuxOutQ[6] = 
-        (group == 0) ? `SLICE(samp_inQ, 25, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inQ, 20, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inQ, 15, S_WIDTH):
-        'b0;
-
-    assign sampMuxOutQ[7] = 
-        (group == 0) ? `SLICE(samp_inQ, 26, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inQ, 21, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inQ, 16, S_WIDTH):
-        'b0;
-
-    assign sampMuxOutQ[8] = 
-        (group == 0) ? `SLICE(samp_inQ, 27, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inQ, 22, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inQ, 17, S_WIDTH):
-        'b0;
-    assign sampMuxOutQ[9] = 
-        (group == 0) ? `SLICE(samp_inQ, 28, S_WIDTH):
-        (group == 1) ? `SLICE(samp_inQ, 23, S_WIDTH):
-        (group == 2) ? `SLICE(samp_inQ, 18, S_WIDTH):
-        'b0;
-
-//    // rest of the lower half
-//    for(s = S_DEPTH-(S_MUXES/2); s <S_DEPTH; s+= 1) begin // 24, 25, 26, 27, 28: rev
-//        // one of the middle pair, third input 0
-//        if (s == S_DEPTH-(S_MUXES/2)) begin
-//            assign sampMuxOutI[s - (S_DEPTH-S_MUXES)] = 
-//            (group == 0) ? `SLICE(samp_inI, s,     S_WIDTH):
-//            (group == 1) ? `SLICE(samp_inI, (s-5) , S_WIDTH):
-//            'b0;
-//            assign sampMuxOutQ[s - (S_DEPTH-S_MUXES)] = 
-//            (group == 0) ? `SLICE(samp_inQ, s,     S_WIDTH):
-//            (group == 1) ? `SLICE(samp_inQ, (s-5) , S_WIDTH):
-//            'b0;
-//        end
-//        else begin
-//            assign sampMuxOutI[s - (S_DEPTH-S_MUXES)] = 
-//            (group == 0) ? `SLICE(samp_inI, s,     S_WIDTH):
-//            (group == 1) ? `SLICE(samp_inI, (s-5) , S_WIDTH):
-//            (group == 2) ? `SLICE(samp_inI, (s-10), S_WIDTH):
-//            'b0;
-//            assign sampMuxOutQ[s - (S_DEPTH-S_MUXES)] = 
-//            (group == 0) ? `SLICE(samp_inQ, s,     S_WIDTH):
-//            (group == 1) ? `SLICE(samp_inQ, (s-5) , S_WIDTH):
-//            (group == 2) ? `SLICE(samp_inQ, (s-10), S_WIDTH):
-//            'b0;
-//        end
-//    end
-//    endgenerate
+    // rest of the lower half
+    for(s = S_DEPTH-(S_MUXES/2); s <S_DEPTH; s+= 1) begin // 24, 25, 26, 27, 28: rev
+        // one of the middle pair, third input 0
+        if (s == S_DEPTH-(S_MUXES/2)) begin
+            assign sampMuxOutI[s - (S_DEPTH-S_MUXES)] = 
+            (group == 0) ? `SLICE(samp_inI, s,     S_WIDTH):
+            (group == 1) ? `SLICE(samp_inI, (s-5) , S_WIDTH):
+            'b0;
+            assign sampMuxOutQ[s - (S_DEPTH-S_MUXES)] = 
+            (group == 0) ? `SLICE(samp_inQ, s,     S_WIDTH):
+            (group == 1) ? `SLICE(samp_inQ, (s-5) , S_WIDTH):
+            'b0;
+        end
+        else begin
+            assign sampMuxOutI[s - (S_DEPTH-S_MUXES)] = 
+            (group == 0) ? `SLICE(samp_inI, s,     S_WIDTH):
+            (group == 1) ? `SLICE(samp_inI, (s-5) , S_WIDTH):
+            (group == 2) ? `SLICE(samp_inI, (s-10), S_WIDTH):
+            'b0;
+            assign sampMuxOutQ[s - (S_DEPTH-S_MUXES)] = 
+            (group == 0) ? `SLICE(samp_inQ, s,     S_WIDTH):
+            (group == 1) ? `SLICE(samp_inQ, (s-5) , S_WIDTH):
+            (group == 2) ? `SLICE(samp_inQ, (s-10), S_WIDTH):
+            'b0;
+        end
+    end
+    endgenerate
     
     genvar so;
     generate
